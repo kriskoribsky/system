@@ -7,6 +7,10 @@
 perform system update and reboot
 `sudo dnf update && sudo reboot`
 
+### enable Fedora workstation repos
+
+`sudo dnf install fedora-workstation-repositories`
+
 ### enable RPM fusion instructions at: "https://rpmfusion.org/Configuration" :
 
 `sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm`
@@ -156,12 +160,17 @@ layout switch shortcut: super+space
 sudo dnf remove nano
 sudo dnf remove vim
 sudo dnf remove gedit
+sudo dnf remove firefox
+sudo dnf remove epiphany
 ```
 
 ### download _kk-system_ workflow specific CLI tools:
 
 ```
-sudo dnf install -y neovim python3-neovim
+sudo dnf install neovim python3-neovim
+sudo dnf reinstall man-pages man-db man
+sudo mandb
+sudo dnf install manpages-posix-dev
 sudo dnf install exa
 sudo dnf install bat
 sudo dnf install tree
@@ -169,13 +178,14 @@ sudo dnf install neofetch
 sudo dnf install tldr
 sudo dnf install colordiff
 sudo dnf install bitwise
+sudo dnf install flatseal
 ```
 
-### download chrome:
-
 ```
-sudo dnf install google-chrome-stable
-sudo dnf install google-chrome-unstable
+sudo dnf install cppcheck
+sudo dnf install gcc
+sudo dnf install valgrind
+sudo dnf install gdb
 ```
 
 ### download vscode:
@@ -187,6 +197,20 @@ sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.m
 dnf check-update
 sudo dnf install code
 ```
+
+### google chrome
+
+```
+sudo dnf install fedora-workstation-repositories
+sudo dnf config-manager --set-enabled google-chrome
+sudo dnf install google-chrome-stable
+sudo dnf install google-chrome-unstable
+```
+
+## Apps
+
+TODO: add dnf & flatpak apps
+flatpak install org.mozilla.firefox
 
 ## Directories
 
