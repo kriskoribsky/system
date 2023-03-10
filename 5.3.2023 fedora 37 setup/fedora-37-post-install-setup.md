@@ -144,12 +144,6 @@ import terminal settings with command:
 
 ### keyboard layouts:<br>
 
-use **strictly QWERTY** with every language
-2 base languages:
-
-1. US qwerty
-2. SK qwerty
-
 layout switch shortcut: super+space
 
 ## CLI configuration
@@ -206,6 +200,12 @@ sudo dnf config-manager --set-enabled google-chrome
 sudo dnf install google-chrome-stable
 sudo dnf install google-chrome-unstable
 ```
+
+### Fonts
+```
+dnf install fira-code-fonts
+```
+
 
 ## Apps
 
