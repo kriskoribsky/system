@@ -103,7 +103,7 @@ Mouse-2         Mute speakers
 ### 3. Apps
 
 Various apps, in-app functionality. Sometimes can use other control keys.\
-Control key: **`Ctrl`**, **`Alt`**
+Control key:  **`Alt`**, **`Ctrl`**
 
 #### Terminal
 
@@ -122,10 +122,14 @@ Ctrl+W          Close tab
 
 ```
 @source:system
+
 @source:extension
-
-Ctrl+Alt
-
+Shift+Alt+F           Find all references
+Shift+Alt+\           Copilot inline suggestion
+Shift+Alt+Enter       Copilot open all suggestions
+Shift+Alt+F5          Language specific debugger
+Shift+Alt+M           Markdown open preview
+Shift+Alt+P           Run selection line in Python terminal
 
 @source:user
 
