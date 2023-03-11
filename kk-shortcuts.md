@@ -71,10 +71,11 @@ Control key: **`Super`**
 
 ```
 Super           *Overview* (search, workspaces, apps)
+Mouse-wheel     Switch between workspaces
 Super+Tab       Switch apps
 Super+`         Switch app windows
-Super+Left      Move to worskpace on the left
-Super+Right     Move to workspace on the right
+Super+Left      Switch to workspace to the left
+Super+Right     Switch to workspace to the right
 Super+W         Close app
 
 Super+0         Root folder
