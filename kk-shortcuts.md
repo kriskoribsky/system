@@ -74,8 +74,13 @@ Super           *Overview* (search, workspaces, apps)
 Mouse-wheel     Switch between workspaces
 Super+Tab       Switch apps
 Super+`         Switch app windows
+
+<!-- the only duplicate shorcuts, useful when working just in CLI / GUI  -->
 Super+Left      Switch to workspace to the left
 Super+Right     Switch to workspace to the right
+Super+ScrollU   Switch to worksapce to the left
+Super+ScrollD   Switch to workspace to the right
+
 Super+W         Close app
 
 Super+0         Root folder
