@@ -24,7 +24,7 @@ cat << EOF
 KK-SYSTEM PACKAGES
 ================================================================================
 EOF
-source packages/setup.sh
+source packages/setup.sh || true
 echo 'Done.'
 
 
@@ -35,7 +35,7 @@ KK-SYSTEM BASH
 ================================================================================
 
 EOF
-source bash/setup.sh
+source bash/setup.sh || true
 echo 'Done.'
 
 
@@ -45,7 +45,7 @@ cat << EOF
 KK-SYSTEM HOME
 ================================================================================
 EOF
-source home/setup.sh
+source home/setup.sh || true
 echo 'Done.'
 
 
@@ -55,5 +55,5 @@ cat << EOF
 KK-SYSTEM GNOME
 ================================================================================
 EOF
-source gnome/setup.sh
+source gnome/setup.sh || true
 echo 'Done.'

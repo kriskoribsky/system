@@ -39,10 +39,10 @@ sudo dnf install flatpak
 
 # add Flathub remote repository & remove official Fedora Flatpak repo to prevent conflicts because everything and more is already in flathub repo
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-remove official Fedora Flatpak repo to prevent conflicts because everything and more is already in flathub repo:
-`flatpak remote-delete fedora`
-reinstall all previous fedora flatpaks with the ones from flathub repo instead of fedora:
-`flatpak install --reinstall flathub $(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1 )`
+# remove official Fedora Flatpak repo to prevent conflicts because everything and more is already in flathub repo:
+flatpak remote-delete fedora
+# reinstall all previous fedora flatpaks with the ones from flathub repo instead of fedora:
+flatpak install --reinstall flathub $(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1 )
 
 
 
@@ -53,7 +53,6 @@ sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=Pack
 sudo dnf groupupdate sound-and-video
 
 # manual pages
-sudo dnf install manpages-posix-dev
 sudo dnf reinstall man-pages man-db man
 sudo mandb
 
@@ -67,19 +66,19 @@ sudo fwupdmgr update
 
 # REMOVE DNF PACKAGES
 # ================================================================================
-sudo dnf remove $(cat remove-pkg.txt)
+sudo dnf remove $(cat ~/.kk-system/packages/remove-pkg.txt)
 
 
 
 # INSTALL DNF PACKAGES
 # ================================================================================
-sudo dnf install $(cat install-pkg.txt)
+sudo dnf install $(cat ~/.kk-system/packages/install-pkg.txt)
 
 
 
 # INSTALL FLATPAK PACKAGES
 # ================================================================================
-flatpak install $(cat install-flatpak.txt)
+flatpak install $(cat ~/.kk-system/packages/install-flatpak.txt)
 
 
 

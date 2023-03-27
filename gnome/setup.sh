@@ -1,1 +1,1 @@
-dconf load / < ~/.kk-system/gnome/dconf-full.cfg
+dconf load -f / < ~/.kk-system/gnome/dconf-full.cfg
