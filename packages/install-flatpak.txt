@@ -1,0 +1,10 @@
+com.discordapp.Discord
+com.jgraph.drawio.desktop
+com.mattjakeman.ExtensionManager
+com.obsproject.Studio
+com.teamspeak.TeamSpeak
+io.dbeaver.DBeaverCommunity
+org.chromium.Chromium
+org.gnome.Epiphany
+org.mozilla.firefox
+org.videolan.VLC

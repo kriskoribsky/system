@@ -1,0 +1,19 @@
+curl
+wget
+git
+neovim python3-neovim
+ascii
+exa
+bat
+tree
+neofetch
+tldr
+colordiff
+bitwise
+flatseal
+cppcheck
+gcc
+valgrind
+gdb
+dconf-editor
+fira-code-fonts
