@@ -38,7 +38,14 @@ EOF
 source bash/setup.sh || true
 echo 'Done.'
 
+cat << EOF
 
+KK-SYSTEM GDB
+================================================================================
+
+EOF
+source gdb/setup.sh || true
+echo 'Done.'
 
 cat << EOF
 
