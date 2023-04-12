@@ -3,6 +3,7 @@ wget
 git
 neovim python3-neovim
 ascii
+xclip
 exa
 bat
 tree
