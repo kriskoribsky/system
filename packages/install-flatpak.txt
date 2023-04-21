@@ -8,3 +8,4 @@ org.chromium.Chromium
 org.gnome.Epiphany
 org.mozilla.firefox
 org.videolan.VLC
+net.werwolv.ImHex
