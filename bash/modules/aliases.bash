@@ -9,3 +9,7 @@ alias term='function _f() { gnome-terminal --quiet --working-directory="$(realpa
 alias xclip='xclip -selection clipboard'
 
 alias tree='tree --dirsfirst'
+
+alias mkdir='mkdir -pv'
+
+alias update='sudo dnf update -y && flatpak update -y && reboot'
