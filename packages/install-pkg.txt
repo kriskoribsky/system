@@ -18,3 +18,4 @@ valgrind
 gdb
 dconf-editor
 fira-code-fonts
+git-filter-repo
