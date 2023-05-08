@@ -1,7 +1,18 @@
 curl
 wget
 git
-neovim python3-neovim
+
+@development-tools
+make
+gcc
+g++
+clang
+kernel-devel
+cppcheck
+valgrind
+gdb
+
+git-filter-repo
 ascii
 xclip
 exa
@@ -12,11 +23,7 @@ tldr
 colordiff
 bitwise
 flatseal
-cppcheck
-gcc
-valgrind
-gdb
-dconf-editor
-fira-code-fonts
-git-filter-repo
 cloc
+fira-code-fonts
+dconf-editor
+neovim python3-neovim
