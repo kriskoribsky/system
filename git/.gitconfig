@@ -3,7 +3,7 @@
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [core]
-	editor = vim
+	editor = vi
 
 	# Don't consider trailing space change as a cause for merge conflicts
   	whitespace = -trailing-space
