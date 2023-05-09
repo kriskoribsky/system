@@ -1,6 +1,6 @@
 [alias]
-	# Display tree-like log
-  	log = log --graph --date=relative --pretty=tformat:'%Cred%h%Creset -%C(auto)%d%Creset %s %Cgreen(%an %ad)%Creset'
+	# From http://garmoncheg.blogspot.com/2012/06/pretty-git-log.html
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
 [core]
 	editor = vim
@@ -30,3 +30,7 @@
 	# Disable decorate for reflog
 	# (because there is no dedicated `reflog` section available)
 	decorate = false
+
+[merge]
+	# Disable fast-forward merges as default merge strategy.
+	ff = false1

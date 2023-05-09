@@ -1,2 +1,2 @@
-# symlink gdb config
-ln -s ~/.kk-system/gdb/init.gdb ~/.gdbinit
+# symlink git config
+ln -s ~/.kk-system/git/.gitconfig ~/.gitconfig
