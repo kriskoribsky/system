@@ -13,3 +13,5 @@ alias tree='tree --dirsfirst'
 alias mkdir='mkdir -pv'
 
 alias update='sudo dnf update -y && flatpak update -y && reboot'
+
+alias rm='rm -I'
