@@ -1,0 +1,12 @@
+# remove binds of readline arguments to prevent collision with terminal shortcuts
+bind -r '\e-'
+bind -r '\e0'
+bind -r '\e1'
+bind -r '\e2'
+bind -r '\e3'
+bind -r '\e4'
+bind -r '\e5'
+bind -r '\e6'
+bind -r '\e7'
+bind -r '\e8'
+bind -r '\e9'

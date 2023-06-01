@@ -16,9 +16,10 @@ esac
 
 # modules
 source ~/.kk-system/bash/modules/aliases.bash
-source ~/.kk-system/bash/modules/prompt.bash
-source ~/.kk-system/bash/modules/history.bash
+source ~/.kk-system/bash/modules/binds.bash
 source ~/.kk-system/bash/modules/git.bash
+source ~/.kk-system/bash/modules/history.bash
+source ~/.kk-system/bash/modules/prompt.bash
 
 
 
