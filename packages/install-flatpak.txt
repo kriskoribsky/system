@@ -8,3 +8,4 @@ org.chromium.Chromium
 org.gnome.Epiphany
 org.mozilla.firefox
 net.werwolv.ImHex
+org.gimp.GIMP
