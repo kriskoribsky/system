@@ -5,8 +5,9 @@ org.mozilla.firefox
 org.gnome.Epiphany
 com.teamspeak.TeamSpeak
 com.discordapp.Discord
-org.gimp.GIMP
+org.audacityteam.Audacity
 com.obsproject.Studio
+org.gimp.GIMP
 net.werwolv.ImHex
 io.dbeaver.DBeaverCommunity
 com.jgraph.drawio.desktop
