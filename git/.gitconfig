@@ -34,5 +34,12 @@
 [merge]
 	# Disable fast-forward merges as default merge strategy.
 	ff = false1
+	
 [init]
 	defaultBranch = main
+
+[user]
+	signingkey = D16CBD8493F599E6
+
+[commit]
+	gpgsign = true
