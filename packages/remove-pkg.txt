@@ -1,6 +1,5 @@
 firefox
 epiphany
-gedit
 nano
 vim
 gedit
