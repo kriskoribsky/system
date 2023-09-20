@@ -35,7 +35,7 @@ if [[ $REPLY =~ ^[^Yy]$ ]]; then
     exit 1
 fi
 
-for module in "$SYSTEM_DIR_MODULES"/*; do
+for module in "$SYSTEM_DIR_PRIORTIY"/* "$SYSTEM_DIR_MODULES"/*; do
     if [ -d "$module" ]; then
         target="$module/$BOOTSTRAP_INSTALLATION_SCRIPT"
         title="$SYSTEM_NAME $module"
