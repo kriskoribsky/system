@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# directory of this script
+dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+
 # REMOVE DNF PACKAGES
 # ================================================================================
 sudo dnf remove -y "$(cat ~/.kk-system/packages/remove-pkg.txt)"
@@ -14,6 +17,6 @@ flatpak install -y "$(cat ~/.kk-system/packages/install-flatpak.txt)"
 
 # INSTALL STANDALONE PACKAGES
 # ================================================================================
-"$(dirname "$0")/config/install-chrome.sh"
-"$(dirname "$0")/config/install-vscode.sh"
-"$(dirname "$0")/config/install-docker.sh"
+"$dir/config/install-chrome.sh"
+"$dir/config/install-vscode.sh"
+"$dir/config/install-docker.sh"

@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+# directory of this script
+dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+
 # Create system home structure
 # ================================================================================
 while IFS= read -r directory; do
@@ -8,7 +11,7 @@ while IFS= read -r directory; do
         touch "$HOME/$directory/.immutable"
         sudo chattr =i "$HOME/$directory/.immutable"
     fi
-done <"$(dirname "$0")/config/structure.txt"
+done <"$dir/config/structure.txt"
 
 # Move default xdg user dirs
 # ================================================================================

@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
 
+# directory of this script
+dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+
 # load configured gnome settings
-dconf load -f / <"$(dirname "$0")/config/dconf-full.cfg"
+dconf load -f / <"$dir/config/dconf-full.cfg"
