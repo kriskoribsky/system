@@ -12,11 +12,11 @@ echo 'Script will now download & install remote system repository'
 echo
 
 if ! git --version >/dev/null 2>&1; then
-    echo 'Error: git is not installed. Please downlaod git and rerun this script!'
+    echo 'Error: git is not installed. Please download git and rerun this script!'
     exit 1
 fi
 
-git clone "$BOOTSTRAP_SYSTEM_REPO $BOOTSTRAP_SYSTEM_LOCATION"
+git clone "$BOOTSTRAP_SYSTEM_REPO" "$BOOTSTRAP_SYSTEM_LOCATION"
 
 source "$BOOTSTRAP_SYSTEM_LOCATION/config.sh"
 
