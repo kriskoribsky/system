@@ -4,8 +4,8 @@
 dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 source "$dir/config.sh"
 
-if [[ "${UID}" -ne 0 ]]; then
-    echo 'Bootstrap script requires superuser privileges. Please rerun this script with sudo.'
+if [[ "${UID}" -eq 0 ]]; then
+    echo "Please don't run this script as superuser. Sudo access permissions will be needed later."
     exit 1
 fi
 
@@ -42,20 +42,17 @@ for module in "$SYSTEM_DIR_PRIORTIY"/* "$SYSTEM_DIR_MODULES"/*; do
         target="$module/$BOOTSTRAP_INSTALLATION_SCRIPT"
         title="$SYSTEM_NAME $module"
 
-        echo -e "\n$BOOTSTRAP_PROMPT_DIVIDER" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
-        echo "${title^^}" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
+        echo -e "\n${title^^}" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
+        echo "$BOOTSTRAP_PROMPT_DIVIDER" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
 
         if [ -e "$target" ] && [ -x "$target" ]; then
-            if "./$target" 2>>"$BOOTSTRAP_INSTALLATION_REPORT"; then
-                echo -e "\nSUCCESS: $target installed successfully" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
+            if "$target" 2>>"$BOOTSTRAP_INSTALLATION_REPORT"; then
+                echo -e "SUCCESS: $target installed successfully" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
             else
-                echo -e "\nERROR: there was an error installing $target" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
+                echo -e "ERROR: there was an error installing $target" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
             fi
         else
-            echo -e '\n' | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
             echo "ERROR: $target not found or is not executable" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
         fi
-
-        echo "$BOOTSTRAP_PROMPT_DIVIDER" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
     fi
 done
