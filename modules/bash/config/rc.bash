@@ -5,11 +5,11 @@ case $- in
 esac
 
 # modules
-source "$HOME/system/bash/config/modules/aliases.bash"
-source "$HOME/system/bash/config/modules/binds.bash"
-source "$HOME/system/bash/config/modules/git.bash"
-source "$HOME/system/bash/config/modules/history.bash"
-source "$HOME/system/bash/config/modules/prompt.bash"
+source "$HOME/system/modules/bash/config/modules/aliases.bash"
+source "$HOME/system/modules/bash/config/modules/binds.bash"
+source "$HOME/system/modules/bash/config/modules/git.bash"
+source "$HOME/system/modules/bash/config/modules/history.bash"
+source "$HOME/system/modules/bash/config/modules/prompt.bash"
 
 # Old PopOS 20.04 .bashrc
 # ================================================================================
