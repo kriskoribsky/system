@@ -5,11 +5,11 @@ case $- in
 esac
 
 # modules
-source "$HOME/system/bash/config/modules/aliases.bash"
-source "$HOME/system/bash/config/modules/binds.bash"
-source "$HOME/system/bash/config/modules/git.bash"
-source "$HOME/system/bash/config/modules/history.bash"
-source "$HOME/system/bash/config/modules/prompt.bash"
+source "$SYSTEM_USER_HOME/system/bash/config/modules/aliases.bash"
+source "$SYSTEM_USER_HOME/system/bash/config/modules/binds.bash"
+source "$SYSTEM_USER_HOME/system/bash/config/modules/git.bash"
+source "$SYSTEM_USER_HOME/system/bash/config/modules/history.bash"
+source "$SYSTEM_USER_HOME/system/bash/config/modules/prompt.bash"
 
 # Old PopOS 20.04 .bashrc
 # ================================================================================
@@ -49,7 +49,7 @@ if [ -f /etc/bashrc ]; then
 fi
 
 # Node version manager
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$SYSTEM_USER_HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
