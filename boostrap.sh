@@ -46,8 +46,11 @@ for module in "$SYSTEM_DIR_PRIORTIY"/* "$SYSTEM_DIR_MODULES"/*; do
         echo "${title^^}" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
 
         if [ -e "$target" ] && [ -x "$target" ]; then
-            result=$(./target 2>>"$BOOTSTRAP_INSTALLATION_REPORT")
-            if [ "$result" -eq 0 ]; then
+
+            # execute module install
+            ./target 2>>"$BOOTSTRAP_INSTALLATION_REPORT"
+
+            if [ "$0" -eq 0 ]; then
                 echo -e "\nSUCCESS: $target installed successfully" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
             else
                 echo -e "\nERROR: there was an error installing $target" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
