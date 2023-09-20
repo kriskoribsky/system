@@ -11,7 +11,6 @@ if [[ ${SYSTEM_CONFIG_LOADED:-} -ne 1 ]]; then
     export SYSTEM_NAME='system'
     export SYSTEM_VERSION='1.0.0'
 
-    SYSTEM_USER_HOME=$(getent passwd "$SUDO_USER" | cut -d: -f6)
     SYSTEM_DIR_ROOT="$dir"
     SYSTEM_DIR_MODULES="$dir/modules"
     SYSTEM_DIR_PRIORTIY="$dir/priority"
@@ -20,7 +19,6 @@ if [[ ${SYSTEM_CONFIG_LOADED:-} -ne 1 ]]; then
 
     SYSTEM_PATH_CONFIG=$(readlink -f "$dir/config.sh")
 
-    export SYSTEM_USER_HOME
     export SYSTEM_DIR_ROOT
     export SYSTEM_DIR_MODULES
     export SYSTEM_DIR_PRIORTIY
