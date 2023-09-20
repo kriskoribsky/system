@@ -12,13 +12,13 @@ if [[ ${SYSTEM_CONFIG_LOADED:-} -ne 1 ]]; then
     export SYSTEM_VERSION='1.0.0'
 
     SYSTEM_USER_HOME=$(getent passwd "$SUDO_USER" | cut -d: -f6)
-    SYSTEM_DIR_ROOT="$(path_absolute "$dir")"
-    SYSTEM_DIR_MODULES="$(path_join "$SYSTEM_DIR_ROOT" 'modules')"
-    SYSTEM_DIR_PRIORTIY="$(path_join "$SYSTEM_DIR_ROOT" 'priority')"
-    SYSTEM_DIR_UTILS="$(path_join "$SYSTEM_DIR_ROOT" 'utils')"
-    SYSTEM_DIR_BIN="$(path_join "$SYSTEM_DIR_ROOT" 'bin')"
+    SYSTEM_DIR_ROOT="$dir"
+    SYSTEM_DIR_MODULES="$dir/modules"
+    SYSTEM_DIR_PRIORTIY="$dir/priority"
+    SYSTEM_DIR_UTILS="$dir/utils"
+    SYSTEM_DIR_BIN="$dir/bin"
 
-    SYSTEM_PATH_CONFIG=$(readlink -f "$0")
+    SYSTEM_PATH_CONFIG=$(readlink -f "$dir/config.sh")
 
     export SYSTEM_USER_HOME
     export SYSTEM_DIR_ROOT

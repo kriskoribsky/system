@@ -4,4 +4,4 @@
 dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 # symlink gdb config
-ln -s "$dir/config/.gdbinit" "$SYSTEM_USER_HOME/.gdbinit"
+ln -s "$dir/config/.gdbinit" "$HOME/.gdbinit"
