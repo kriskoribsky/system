@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-source "$(dirname "$0")/config.sh"
+# directory of this script
+dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
+source "$dir/config.sh"
 
 if [[ "${UID}" -ne 0 ]]; then
     echo 'Bootstrap script requires superuser privileges. Please rerun this script with sudo.'
