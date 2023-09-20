@@ -12,22 +12,22 @@ sudo sh -c 'echo "defaultyes=True" >> /etc/dnf/dnf.conf'
 
 # FLATPAK SETUP
 # ================================================================================
-sudo dnf install flatpak
+sudo dnf install -y flatpak
 
 # add Flathub remote repository & remove official Fedora Flatpak repo to prevent conflicts because everything and more is already in flathub repo
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add -y --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 # remove official Fedora Flatpak repo to prevent conflicts because everything and more is already in flathub repo:
-flatpak remote-delete fedora
+flatpak remote-delete -y fedora
 # reinstall all previous fedora flatpaks with the ones from flathub repo instead of fedora:
-flatpak install --reinstall flathub "$(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1)"
+flatpak install -y --reinstall flathub "$(flatpak list --app-runtime=org.fedoraproject.Platform --columns=application | tail -n +1)"
 
 # FEDORA SETUP
 # ================================================================================
 # fedora repos
-sudo dnf install fedora-workstation-repositories
+sudo dnf install -y fedora-workstation-repositories
 
 # enable RPM fusion https://rpmfusion.org/Configuration
-sudo dnf install "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
+sudo dnf install -y "https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm"
 
 # also install appstream-data using DNF to enable installing packages using Gnome Software/KDE Discover
 sudo dnf groupupdate core
