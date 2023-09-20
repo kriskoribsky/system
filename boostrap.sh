@@ -42,11 +42,12 @@ for module in "$SYSTEM_DIR_PRIORTIY"/* "$SYSTEM_DIR_MODULES"/*; do
         target="$module/$BOOTSTRAP_INSTALLATION_SCRIPT"
         title="$SYSTEM_NAME $module"
 
-        echo "$BOOTSTRAP_PROMPT_DIVIDER" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
+        echo -e "\n$BOOTSTRAP_PROMPT_DIVIDER" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
         echo "${title^^}" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
 
         if [ -e "$target" ] && [ -x "$target" ]; then
-            if ./target 2>>"$BOOTSTRAP_INSTALLATION_REPORT"; then
+            result=$(./target 2>>"$BOOTSTRAP_INSTALLATION_REPORT")
+            if [ "$result" -eq 0 ]; then
                 echo -e "\nSUCCESS: $target installed successfully" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
             else
                 echo -e "\nERROR: there was an error installing $target" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
@@ -57,6 +58,5 @@ for module in "$SYSTEM_DIR_PRIORTIY"/* "$SYSTEM_DIR_MODULES"/*; do
         fi
 
         echo "$BOOTSTRAP_PROMPT_DIVIDER" | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
-        echo -e '\n' | tee -a "$BOOTSTRAP_INSTALLATION_REPORT"
     fi
 done
