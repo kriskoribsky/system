@@ -9,5 +9,3 @@ dev/external
 dev/gist
 
 uni
-uni/TUKE
-uni/MUNI
