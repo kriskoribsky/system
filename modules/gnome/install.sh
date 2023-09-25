@@ -4,4 +4,4 @@
 dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" &>/dev/null && pwd)
 
 # load configured gnome settings
-dconf load -f / <"$dir/config/dconf-full.cfg"
+dconf load -f / <"$dir/config/dconf-full.ini"
