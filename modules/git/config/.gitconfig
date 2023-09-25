@@ -39,7 +39,9 @@
 	defaultBranch = main
 
 [user]
-	signingkey = D16CBD8493F599E6
+	email = 90533421+kriskoribsky@users.noreply.github.com
+	name = kriskoribsky
+	signingkey = 8CF715166A17A7F3
 
 [commit]
 	gpgsign = true
