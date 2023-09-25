@@ -1,7 +1,6 @@
 curl
 wget
 git
-
 @development-tools
 make
 gcc
@@ -11,7 +10,6 @@ kernel-devel
 cppcheck
 valgrind
 gdb
-
 git-filter-repo
 ascii
 xclip
@@ -19,7 +17,6 @@ exa
 bat
 tree
 neofetch
-tldr
 colordiff
 bitwise
 flatseal
