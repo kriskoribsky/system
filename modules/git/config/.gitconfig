@@ -41,7 +41,7 @@
 [user]
 	email = 90533421+kriskoribsky@users.noreply.github.com
 	name = kriskoribsky
-	signingkey = 8CF62A9357D822A4
+	signingkey = C359420BC21F9BCA
 
 [commit]
 	gpgsign = true
