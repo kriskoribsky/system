@@ -54,3 +54,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 unset rc
+
+# Add GPG key on each shell start
+export GPG_TTY=$(tty)
