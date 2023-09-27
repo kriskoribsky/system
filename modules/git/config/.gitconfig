@@ -1,6 +1,6 @@
 [alias]
 	# From http://garmoncheg.blogspot.com/2012/06/pretty-git-log.html
-    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    lg = log --color --graph --pretty=format:'%C(magenta)%h%Creset -%C(yellow)%d%Creset %s %C(blue)(%cr) %C(brightblue)<%an>%Creset' --abbrev-commit
 
 [core]
 	editor = vi
