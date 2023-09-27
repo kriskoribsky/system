@@ -1,0 +1,2 @@
+Github Themes:
+https://github.com/edurojasr/Gnome-Terminal-GitHub-Theme

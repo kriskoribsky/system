@@ -36,6 +36,9 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# enable autocomplete after sudo command 
+complete -cf sudo
+
 # Make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 

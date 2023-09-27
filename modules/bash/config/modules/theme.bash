@@ -1,45 +1,77 @@
 # shellcheck disable=SC2155
-# shellcheck disable=SC2034
 
-# color values using 256 color palette (8 bit)
-
-# Default
+# Default 16 bit color palette
 # ================================================================================
+export SYSTEM_THEME_PALETTE_00=0 # black
+export SYSTEM_THEME_PALETTE_01=1 # red
+export SYSTEM_THEME_PALETTE_02=2 # green
+export SYSTEM_THEME_PALETTE_03=3 # yellow
+export SYSTEM_THEME_PALETTE_04=4 # blue
+export SYSTEM_THEME_PALETTE_05=5 # magenta
+export SYSTEM_THEME_PALETTE_06=6 # cyan
+export SYSTEM_THEME_PALETTE_07=7 # white
 
-export SYSTEM_THEME_BLACK=0
-export SYSTEM_THEME_RED=1
-export SYSTEM_THEME_GREEN=2
-export SYSTEM_THEME_YELLOW=3
-export SYSTEM_THEME_BLUE=4
-export SYSTEM_THEME_MAGENTA=5
-export SYSTEM_THEME_CYAN=6
-export SYSTEM_THEME_WHITE=7
+export SYSTEM_THEME_PALETTE_08=8  # bright black
+export SYSTEM_THEME_PALETTE_09=9  # bright red
+export SYSTEM_THEME_PALETTE_10=10 # bright green
+export SYSTEM_THEME_PALETTE_11=11 # bright yellow
+export SYSTEM_THEME_PALETTE_12=12 # bright blue
+export SYSTEM_THEME_PALETTE_13=13 # bright magenta
+export SYSTEM_THEME_PALETTE_14=14 # bright cyan
+export SYSTEM_THEME_PALETTE_15=15 # bright white
 
-# Themes
+# ANSI transformed color codes
 # ================================================================================
+export SYSTEM_THEME_FG_00=$(tput setaf $SYSTEM_THEME_PALETTE_00)
+export SYSTEM_THEME_BG_00=$(tput setab $SYSTEM_THEME_PALETTE_00)
 
-# Github Dark
-export SYSTEM_THEME_GITHUB_WHITE=7
-export SYSTEM_THEME_GITHUB_MAGENTA=55
-export SYSTEM_THEME_GITHUB_DARKBLUE=26
-export SYSTEM_THEME_GITHUB_LIGHTBLUE=111
-export SYSTEM_THEME_GITHUB_ORANGE=172
-export SYSTEM_THEME_GITHUB_RED=160
-export SYSTEM_THEME_GITHUB_GREEN=84
+export SYSTEM_THEME_FG_01=$(tput setaf $SYSTEM_THEME_PALETTE_01)
+export SYSTEM_THEME_BG_01=$(tput setab $SYSTEM_THEME_PALETTE_01)
 
-# Active
-export SYSTEM_THEME_PRIMARY=$SYSTEM_THEME_GITHUB_WHITE
-export SYSTEM_THEME_HEADING=$SYSTEM_THEME_GITHUB_MAGENTA
-export SYSTEM_THEME_LINK=$SYSTEM_THEME_GITHUB_DARKBLUE
-export SYSTEM_THEME_HIGHLIGHT=$SYSTEM_THEME_GITHUB_LIGHTBLUE
-export SYSTEM_THEME_SELECTION=$SYSTEM_THEME_GITHUB_ORANGE
-export SYSTEM_THEME_ERROR=$SYSTEM_THEME_GITHUB_RED
-export SYSTEM_THEME_SUCCESS=$SYSTEM_THEME_GITHUB_GREEN
+export SYSTEM_THEME_FG_02=$(tput setaf $SYSTEM_THEME_PALETTE_02)
+export SYSTEM_THEME_BG_02=$(tput setab $SYSTEM_THEME_PALETTE_02)
 
-# Color codes
+export SYSTEM_THEME_FG_03=$(tput setaf $SYSTEM_THEME_PALETTE_03)
+export SYSTEM_THEME_BG_03=$(tput setab $SYSTEM_THEME_PALETTE_03)
+
+export SYSTEM_THEME_FG_04=$(tput setaf $SYSTEM_THEME_PALETTE_04)
+export SYSTEM_THEME_BG_04=$(tput setab $SYSTEM_THEME_PALETTE_04)
+
+export SYSTEM_THEME_FG_05=$(tput setaf $SYSTEM_THEME_PALETTE_05)
+export SYSTEM_THEME_BG_05=$(tput setab $SYSTEM_THEME_PALETTE_05)
+
+export SYSTEM_THEME_FG_06=$(tput setaf $SYSTEM_THEME_PALETTE_06)
+export SYSTEM_THEME_BG_06=$(tput setab $SYSTEM_THEME_PALETTE_06)
+
+export SYSTEM_THEME_FG_07=$(tput setaf $SYSTEM_THEME_PALETTE_07)
+export SYSTEM_THEME_BG_07=$(tput setab $SYSTEM_THEME_PALETTE_07)
+
+export SYSTEM_THEME_FG_08=$(tput setaf $SYSTEM_THEME_PALETTE_08)
+export SYSTEM_THEME_BG_08=$(tput setab $SYSTEM_THEME_PALETTE_08)
+
+export SYSTEM_THEME_FG_09=$(tput setaf $SYSTEM_THEME_PALETTE_09)
+export SYSTEM_THEME_BG_09=$(tput setab $SYSTEM_THEME_PALETTE_09)
+
+export SYSTEM_THEME_FG_10=$(tput setaf $SYSTEM_THEME_PALETTE_10)
+export SYSTEM_THEME_BG_10=$(tput setab $SYSTEM_THEME_PALETTE_10)
+
+export SYSTEM_THEME_FG_11=$(tput setaf $SYSTEM_THEME_PALETTE_11)
+export SYSTEM_THEME_BG_11=$(tput setab $SYSTEM_THEME_PALETTE_11)
+
+export SYSTEM_THEME_FG_12=$(tput setaf $SYSTEM_THEME_PALETTE_12)
+export SYSTEM_THEME_BG_12=$(tput setab $SYSTEM_THEME_PALETTE_12)
+
+export SYSTEM_THEME_FG_13=$(tput setaf $SYSTEM_THEME_PALETTE_13)
+export SYSTEM_THEME_BG_13=$(tput setab $SYSTEM_THEME_PALETTE_13)
+
+export SYSTEM_THEME_FG_14=$(tput setaf $SYSTEM_THEME_PALETTE_14)
+export SYSTEM_THEME_BG_14=$(tput setab $SYSTEM_THEME_PALETTE_14)
+
+export SYSTEM_THEME_FG_15=$(tput setaf $SYSTEM_THEME_PALETTE_15)
+export SYSTEM_THEME_BG_15=$(tput setab $SYSTEM_THEME_PALETTE_15)
+
+# ANSI additional text styles
 # ================================================================================
-
-# Default
 export SYSTEM_THEME_BOLD=$(tput bold)
 export SYSTEM_THEME_DIM=$(tput dim)
 export SYSTEM_THEME_UNDERLINE=$(tput smul)
@@ -48,58 +80,3 @@ export SYSTEM_THEME_ITALIC=$(tput sitm)
 export SYSTEM_THEME_STRIKETHROUGH=$(tput smxx)
 
 export SYSTEM_THEME_RESET=$(tput sgr0)
-
-export SYSTEM_THEME_FG_BLACK=$(tput setaf $SYSTEM_THEME_BLACK)
-export SYSTEM_THEME_BG_BLACK=$(tput setab $SYSTEM_THEME_BLACK)
-
-export SYSTEM_THEME_FG_RED=$(tput setaf $SYSTEM_THEME_RED)
-export SYSTEM_THEME_BG_RED=$(tput setab $SYSTEM_THEME_RED)
-
-export SYSTEM_THEME_FG_GREEN=$(tput setaf $SYSTEM_THEME_GREEN)
-export SYSTEM_THEME_BG_GREEN=$(tput setab $SYSTEM_THEME_GREEN)
-
-export SYSTEM_THEME_FG_YELLOW=$(tput setaf $SYSTEM_THEME_YELLOW)
-export SYSTEM_THEME_BG_YELLOW=$(tput setab $SYSTEM_THEME_YELLOW)
-
-export SYSTEM_THEME_FG_BLUE=$(tput setaf $SYSTEM_THEME_BLUE)
-export SYSTEM_THEME_BG_BLUE=$(tput setab $SYSTEM_THEME_BLUE)
-
-export SYSTEM_THEME_FG_MAGENTA=$(tput setaf $SYSTEM_THEME_MAGENTA)
-export SYSTEM_THEME_BG_MAGENTA=$(tput setab $SYSTEM_THEME_MAGENTA)
-
-export SYSTEM_THEME_FG_CYAN=$(tput setaf $SYSTEM_THEME_CYAN)
-export SYSTEM_THEME_BG_CYAN=$(tput setab $SYSTEM_THEME_CYAN)
-
-export SYSTEM_THEME_FG_WHITE=$(tput setaf $SYSTEM_THEME_WHITE)
-export SYSTEM_THEME_BG_WHITE=$(tput setab $SYSTEM_THEME_WHITE)
-
-# Current theme
-export SYSTEM_THEME_FG_PRIMARY=$(tput setaf $SYSTEM_THEME_PRIMARY)
-export SYSTEM_THEME_BG_PRIMARY=$(tput setab $SYSTEM_THEME_PRIMARY)
-
-export SYSTEM_THEME_FG_HEADING=$(tput setaf $SYSTEM_THEME_HEADING)
-export SYSTEM_THEME_BG_HEADING=$(tput setab $SYSTEM_THEME_HEADING)
-
-export SYSTEM_THEME_FG_LINK=$(tput setaf $SYSTEM_THEME_LINK)
-export SYSTEM_THEME_BG_LINK=$(tput setab $SYSTEM_THEME_LINK)
-
-export SYSTEM_THEME_FG_HIGHLIGHT=$(tput setaf $SYSTEM_THEME_HIGHLIGHT)
-export SYSTEM_THEME_BG_HIGHLIGHT=$(tput setab $SYSTEM_THEME_HIGHLIGHT)
-
-export SYSTEM_THEME_FG_SELECTION=$(tput setaf $SYSTEM_THEME_SELECTION)
-export SYSTEM_THEME_BG_SELECTION=$(tput setab $SYSTEM_THEME_SELECTION)
-
-export SYSTEM_THEME_FG_ERROR=$(tput setaf $SYSTEM_THEME_ERROR)
-export SYSTEM_THEME_BG_ERROR=$(tput setab $SYSTEM_THEME_ERROR)
-
-export SYSTEM_THEME_FG_SUCCESS=$(tput setaf $SYSTEM_THEME_SUCCESS)
-export SYSTEM_THEME_BG_SUCCESS=$(tput setab $SYSTEM_THEME_SUCCESS)
-
-# Helpful commands
-# ================================================================================
-
-# get number of colors available in tput
-# tput colors
-
-# list 256 color palette with corresponding codes
-# for c in {0..255}; do tput setaf $c; tput setaf $c | cat -v; echo =$c; done
