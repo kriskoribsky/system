@@ -14,8 +14,8 @@ source "$HOME/system/modules/bash/config/modules/history.bash"
 source "$HOME/system/modules/bash/config/modules/prompt.bash"
 
 # Set useful .bashrc error flags & debug info (enable only for debugging)
-# set -ou nounset pipefail
-# trap 's=$?; echo >&2 "$0: Error on line "$LINENO": $BASH_COMMAND"' ERR
+set -ou nounset pipefail
+trap 's=$?; echo >&2 "$0: Error on line "$LINENO": $BASH_COMMAND"' ERR
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.

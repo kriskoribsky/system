@@ -1,14 +1,23 @@
-# static prompt style
-PS="$SYSTEM_THEME_BOLD$SYSTEM_THEME_FG_HEADING\u@\h $SYSTEM_THEME_FG_LINK\w$SYSTEM_THEME_FG_HIGHLIGHT"
+# Prompt style
+PS_IDENTIFIER="\[$SYSTEM_THEME_BOLD\]\[$SYSTEM_THEME_FG_HEADING\]\u@\h\[$SYSTEM_THEME_RESET\]"
+PS_WORKDIR="\[$SYSTEM_THEME_BOLD\]\[$SYSTEM_THEME_FG_LINK\]\w\[$SYSTEM_THEME_RESET\]"
+PS_GIT_START="\[$SYSTEM_THEME_BOLD\]\[$SYSTEM_THEME_FG_HIGHLIGHT\]"
+PS_GIT_END="\[$SYSTEM_THEME_RESET\]"
 
-# executed on after shell command
-PROMPT_COMMAND='if [ $? = 0 ]; then
-                    PS1="${PS} $(__git_ps1 "(%s) ")$SYSTEM_THEME_RESET${SYSTEM_THEME_FG_SUCCESS}$ ${SYSTEM_THEME_RESET}";
-                else
-                    PS1="${PS} $(__git_ps1 "(%s) ")$SYSTEM_THEME_RESET${SYSTEM_THEME_FG_ERROR}$ ${SYSTEM_THEME_RESET}";
-                fi'
+function prompt_command {
+    if [ $? = 0 ]; then
+        PS_STATUS="\[$SYSTEM_THEME_FG_SUCCESS\]$\[$SYSTEM_THEME_RESET\]"
+    else
+        PS_STATUS="\[$SYSTEM_THEME_FG_ERROR\]$\[$SYSTEM_THEME_RESET\]"
+    fi
 
-# show only the last directory in path
+    PS1="${PS_IDENTIFIER} ${PS_WORKDIR}${PS_GIT_START}$(__git_ps1 " (%s)")${PS_GIT_END} ${PS_STATUS} "
+}
+
+# Execute style on each shell command run
+PROMPT_COMMAND=prompt_command
+
+# Show only the last directory in path
 export PROMPT_DIRTRIM=1
 
 export GCC_COLORS="error=01;38;5;$SYSTEM_THEME_ERROR:warning=01;38;5;$SYSTEM_THEME_HEADING:note=01;38;5;$SYSTEM_THEME_SELECTION:caret=01;38;5;$SYSTEM_THEME_SUCCESS:locus=01:quote=01"

@@ -23,7 +23,7 @@
 #        Bash: PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 #          will show username, at-sign, host, colon, cwd, then
 #          various status string, followed by dollar and SP, as
-#          your prompt.
+#          your prompt.1
 #        ZSH:  precmd () { __git_ps1 "%n" ":%~$ " "|%s" }
 #          will show username, pipe, then various status string,
 #          followed by colon, cwd, dollar and SP, as your prompt.
