@@ -40,8 +40,8 @@ fi
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # Set man pages to display using less and use progress in percentage
-# export MANPAGER='less -s -M +Gg'
-export PAGER=less
+export MANPAGER='less -s -M +Gg'
+export PAGER='less -s -M +Gg'
 
 # Add GPG key on each shell start
 export GPG_TTY=$(tty)
