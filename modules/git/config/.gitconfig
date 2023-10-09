@@ -1,6 +1,6 @@
 [alias]
 # From http://garmoncheg.blogspot.com/2012/06/pretty-git-log.html
-lg = log --color --graph --pretty=format:'%C(magenta)%h%C(reset) %C(blue)<%an>%C(reset) %C(brightblue)(%cr)%C(reset) %C(yellow)->%C(reset) %s%C(yellow)%d%C(reset)' --abbrev-commit
+lg = log --color --graph --pretty=format:'%C(magenta)%h%C(reset) %C(blue)<%an>%C(reset) %C(brightblue)(%cr)%C(reset) %C(black)->%C(reset) %s%C(yellow)%d%C(reset)' --abbrev-commit
 
 [core]
 editor = vi
