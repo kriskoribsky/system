@@ -1,4 +1,4 @@
-# system
+# System
 
 Personal multi-system settings, configurations, customizations &amp; apps.
 
