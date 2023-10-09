@@ -1,47 +1,47 @@
 [alias]
-	# From http://garmoncheg.blogspot.com/2012/06/pretty-git-log.html
-lg = log --color --graph --pretty=format:'%C(magenta)%h%C(reset) %C(blue)<%an>%C(reset) %C(brightblue)(%cr)%C(reset) -> %s %C(yellow)%d%C(reset)' --abbrev-commit
+# From http://garmoncheg.blogspot.com/2012/06/pretty-git-log.html
+lg = log --color --graph --pretty=format:'%C(magenta)%h%C(reset) %C(blue)<%an>%C(reset) %C(brightblue)(%cr)%C(reset) %C(yellow)->%C(reset) %s%C(yellow)%d%C(reset)' --abbrev-commit
 
 [core]
-	editor = vi
+editor = vi
 
-	# Don't consider trailing space change as a cause for merge conflicts
-  	whitespace = -trailing-space
+# Don't consider trailing space change as a cause for merge conflicts
+whitespace = -trailing-space
 
 [color]
-	# Enable colors in color-supporting terminals
-	ui = auto
+# Enable colors in color-supporting terminals
+ui = auto
 
 [diff]
-	# Use better, descriptive initials (c, i, w) instead of a/b.
-	mnemonicPrefix = true
-	# Show renames/moves as such
-	renames = true
-	# Display submodule-related information (commit listings)
-	submodule = log
-	# Use VSCode as default diff tool when running `git diff-tool`
-	tool = vscode
+# Use better, descriptive initials (c, i, w) instead of a/b.
+mnemonicPrefix = true
+# Show renames/moves as such
+renames = true
+# Display submodule-related information (commit listings)
+submodule = log
+# Use VSCode as default diff tool when running `git diff-tool`
+tool = vscode
 
 [log]
-	# Use abbrev SHAs whenever possible/relevant instead of full 40 chars
-	abbrevCommit = true
-	# Automatically --follow when given a single path
-	follow = true
-	# Disable decorate for reflog
-	# (because there is no dedicated `reflog` section available)
-	decorate = false
+# Use abbrev SHAs whenever possible/relevant instead of full 40 chars
+abbrevCommit = true
+# Automatically --follow when given a single path
+follow = true
+# Disable decorate for reflog
+# (because there is no dedicated `reflog` section available)
+decorate = true
 
 [merge]
-	# Disable fast-forward merges as default merge strategy.
-	ff = false1
+# Disable fast-forward merges as default merge strategy.
+ff = false
 
 [init]
-	defaultBranch = main
+defaultBranch = main
 
 [user]
-	email = 90533421+kriskoribsky@users.noreply.github.com
-	name = kriskoribsky
-	signingkey = C359420BC21F9BCA
+email = 90533421+kriskoribsky@users.noreply.github.com
+name = kriskoribsky
+signingkey = C359420BC21F9BCA
 
 [commit]
-	gpgsign = true
+gpgsign = true
