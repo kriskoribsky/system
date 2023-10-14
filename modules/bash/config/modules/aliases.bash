@@ -2,7 +2,7 @@
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 alias ls='ls --color=auto --group-directories-first --human-readable'
-alias ll='ls -l --almost-all --size'
+alias ll='ls -l --all --size'
 
 alias tree='tree --dirsfirst'
 
