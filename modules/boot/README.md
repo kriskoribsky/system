@@ -6,4 +6,6 @@ https://www.reddit.com/r/Fedora/comments/rke2wa/comment/hp9rpvb/?utm_source=shar
 
 ## Instructions for setting correct GRUB resolution
 
-https://www.reddit.com/r/linuxquestions/comments/dtd6jt/the_text_is_too_big_in_the_grub_in_my_ultrawide/?sort=top
+https://askubuntu.com/questions/103516/grub2-use-maximum-detected-resolution
+
+https://www.reddit.com/r/linuxquestions/comments/dtd6jt/the_text_is_too_big_in_the_grub_in_my_ultrawide

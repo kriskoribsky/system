@@ -10,4 +10,4 @@ GRUB_ENABLE_BLSCFG="true"
 
 # GRUB_TERMINAL_OUTPUT="gfxterm"
 # GRUB_FONT_PATH="/boot/grub2/fonts/unicode.pf2"
-# GRUB_GFXMODE="1920x1080"
+GRUB_GFXMODE=auto
