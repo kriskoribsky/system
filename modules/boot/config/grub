@@ -1,13 +1,9 @@
-GRUB_TIMEOUT="0"
-GRUB_HIDDEN_TIMEOUT="1"
+GRUB_DEFAULT=0
+GRUB_TIMEOUT=1
+GRUB_TIMEOUT_STYLE=hidden
 GRUB_DISTRIBUTOR="$(sed 's, release .*$,,g' /etc/system-release)"
-GRUB_DEFAULT="saved"
-GRUB_DISABLE_SUBMENU="false"
-# GRUB_TERMINAL_OUTPUT="console"
-# GRUB_CMDLINE_LINUX="rd.driver.blacklist=nouveau modprobe.blacklist=nouveau nvidia-drm.modeset=1 initcall_blacklist=simpledrm_platform_driver_init rhgb quiet rd.driver.blacklist=nouveau modprobe.blacklist=nouveau nvidia-drm.modeset=1 initcall_blacklist=simpledrm_platform_driver_init"
-GRUB_DISABLE_RECOVERY="true"
-GRUB_ENABLE_BLSCFG="true"
-
-# GRUB_TERMINAL_OUTPUT="gfxterm"
-# GRUB_FONT_PATH="/boot/grub2/fonts/unicode.pf2"
+GRUB_DISABLE_SUBMENU=false
+GRUB_CMDLINE_LINUX="rd.driver.blacklist=nouveau modprobe.blacklist=nouveau nvidia-drm.modeset=1 rd.luks.uuid=luks-ad20c4d6-0af9-446a-a8ad-aac58f1b3c44 rhgb quiet rd.driver.blacklist=nouveau modprobe.blacklist=nouveau nvidia-drm.modeset=1"
+GRUB_DISABLE_RECOVERY=true
+GRUB_ENABLE_BLSCFG=true
 GRUB_GFXMODE=auto
