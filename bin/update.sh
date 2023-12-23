@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-# Updates operating system and installed libraries.
+# Update operating system and installed libraries.

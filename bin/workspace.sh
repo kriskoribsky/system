@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-# Presets launching multiple applications (browsers, virtual machines, IDEs) for development work.
+# Presets to launch multiple applications (browsers, virtual machines, IDEs) for development work.
