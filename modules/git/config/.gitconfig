@@ -41,7 +41,8 @@ defaultBranch = main
 [user]
 email = 90533421+kriskoribsky@users.noreply.github.com
 name = kriskoribsky
-signingkey = C359420BC21F9BCA
+signingkey = C359420BC21F9BCA    # WARNING planning gpg signing key change
 
+# could be deprecated/wrong due to new ssh signing of commits feature
 [commit]
 gpgsign = true
