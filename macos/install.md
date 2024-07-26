@@ -1,3 +1,41 @@
+# MacOS setup steps
+
+## Prerequisites
+
+- sign-in/sign-up Apple ID
+- update to the latest MacOS version
+
+## Apps
+
+### System settings
+
+- personalize basic system settings
+
+### Terminal
+
+### Activity Monitor
+
+### Widgets
+
+- use Desktop widgets instead of Notifications Center widgets because of Desktop/Documents focused workflow
+
+### Dock
+
+- remove all applications besides the permanent Finder and Trash
+- automatically hide the dock
+
+### Finder
+
+- delete tags
+- personalize sidebar
+- personalize toolbar
+- personalize default view options
+- personalize Desktop view options
+- personalize Applications folder view options
+- personalize Downloads folder view options
+
+### Safari
+
 ## Development
 
 ### Sharing
