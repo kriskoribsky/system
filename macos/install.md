@@ -1,17 +1,17 @@
-## Sharing
+### Sharing
 Change computer names:
 ```
 sudo scutil --set ComputerName YOUR_NAME
 sudo scutil --set LocalHostName YOUR_NAME
 sudo scutil --set HostName YOUR_NAME
 ```
-## Directories
+### Directories
 Inside home folder create a new folder for all development tasks:
 ```
 mkdir ~/Developer
 ```
 
-## Package management
+### Package management
 Install Homebrew package manager:
 ```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -26,14 +26,14 @@ Save Homebrew update command:
 brew update -v && brew upgrade -v && brew autoremove -v && brew cleanup -s --prune=all -v
 ```
 
-## Shell environment
+### Shell environment
 [Change default shell from Zsh to Bash.](https://stackoverflow.com/questions/77052638/changing-default-shell-from-zsh-to-bash-on-macos-catalina-and-beyond)  
 Remove default Zsh files:
 ```
 rm -r ~/.zprofile ~/.zsh_history ~/.zsh_sessions
 ```
 
-## [SSH Authentication key - GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+### [SSH Authentication key - GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 Generate ssh key:
 ```
 ssh-keygen -t ed25519 -C "github"
@@ -75,7 +75,7 @@ SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
 
 From now on, your ssh agent should add GitHub public key fingerprints to your ~/.ssh/known_hosts file to avoid manually verifying GitHub hosts.
 
-## SSH Signing key - GitHub
+### SSH Signing key - GitHub
 Add ssh public key from steps above to the signing ssh keys in GitHub page.
 
 Tell git about your ssh key to sign offline git commits:
