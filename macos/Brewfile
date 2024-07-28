@@ -1,0 +1,21 @@
+tap "homebrew/bundle"
+# Bourne-Again SHell, a UNIX command interpreter
+brew "bash"
+# Distributed revision control system
+brew "git"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Voice and text chat software
+cask "discord"
+# App to build and share containerised applications and microservices
+cask "docker"
+# Collaborative team software
+cask "figma"
+# Web browser
+cask "firefox"
+# Web browser
+cask "google-chrome"
+# IDE for professional Python development
+cask "pycharm"
+# Open-source code editor
+cask "visual-studio-code"
