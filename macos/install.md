@@ -36,6 +36,8 @@
 
 ### Safari
 
+### Freeform
+
 ## Development
 
 ### Sharing
