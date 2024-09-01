@@ -29,7 +29,7 @@
 - delete tags
 - personalize sidebar
 - personalize toolbar
-- personalize [default view options](https://support.apple.com/guide/mac-help/change-folders-displayed-finder-mac-mchldaafb302/mac)
+- personalize [default view options](https://support.apple.com/en-uz/guide/mac-help/mchldaafb302/mac)
 - personalize Desktop view options
 - personalize Applications folder view options
 - personalize Downloads folder view options
