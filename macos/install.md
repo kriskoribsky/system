@@ -27,6 +27,7 @@
 ### Finder
 
 - delete tags
+- show path bar
 - personalize sidebar
 - personalize toolbar
 - personalize [default view options](https://support.apple.com/en-uz/guide/mac-help/mchldaafb302/mac)
