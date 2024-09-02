@@ -11,10 +11,6 @@
 
 - personalize basic system settings
 
-### Terminal
-
-### Activity Monitor
-
 ### Widgets
 
 - use Desktop widgets instead of Notifications Center widgets because of Desktop/Documents focused workflow
@@ -37,7 +33,13 @@
 
 ### Safari
 
-### Freeform
+### Reminders
+
+### Notes
+
+### Activity Monitor
+
+### Terminal
 
 ## Development
 
