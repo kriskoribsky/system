@@ -94,7 +94,7 @@ rm -r ~/.zprofile ~/.zsh_history ~/.zsh_sessions
 Generate ssh key:
 
 ```
-ssh-keygen -t ed25519 -C "github"
+ssh-keygen -t ed25519 -C "kk-ssh"
 eval "$(ssh-agent -s)"
 touch ~/.ssh/config
 ```
@@ -107,19 +107,19 @@ Edit ~/.ssh/config file, then modify the file to contain the following lines:
 Host github.com
   AddKeysToAgent yes
   UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519
+  IdentityFile ~/.ssh/kk-ssh
 ```
 
 Add private key to the ssh-agent:
 
 ```
-ssh-add --apple-use-keychain ~/.ssh/github
+ssh-add --apple-use-keychain ~/.ssh/kk-ssh
 ```
 
 Copy public key to your clipboard:
 
 ```
-pbcopy < ~/.ssh/github.pub
+pbcopy < ~/.ssh/kk-ssh.pub
 ```
 
 Add the copied public key to the ssh authentication keys in GitHub settings.
@@ -146,5 +146,5 @@ Tell git about your ssh key to sign offline git commits:
 
 ```
 git config --global gpg.format ssh
-git config --global user.signingkey ~/.ssh/github.pub
+git config --global user.signingkey ~/.ssh/kk-ssh.pub
 ```
