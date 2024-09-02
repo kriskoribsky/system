@@ -149,4 +149,5 @@ Tell git about your ssh key to sign offline git commits:
 ```
 git config --global gpg.format ssh
 git config --global user.signingkey ~/.ssh/kk-ssh.pub
+git config --global commit.gpgsign true
 ```
