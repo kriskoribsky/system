@@ -31,6 +31,8 @@
 - personalize Applications folder view options
 - personalize Downloads folder view options
 
+### Launchpad
+
 ### Safari
 
 ### Reminders
@@ -40,6 +42,15 @@
 ### Activity Monitor
 
 ### Terminal
+
+### Photos
+
+#### Configure automatic screenshot saving into Photos app
+
+1. Create folder `~/Pictures/Screenshots`
+2. [Create Automator Folder Action](https://www.quora.com/Can-I-make-my-macOS-screenshots-automatically-save-to-the-Photos-app-instead-of-the-desktop) named `Import Screenshots to Photos` using that folder
+3. [Set shouldDeleteSourceFiles to True](https://discussions.apple.com/thread/7618522?sortBy=rank)
+4. Set Screenshot tool's save location to the newly created `~/Pictures/Screenshots` folder
 
 ## Development
 
