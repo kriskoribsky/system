@@ -33,6 +33,12 @@
 
 ### Launchpad
 
+Organize apps on 2 pages:  
+1. Apple apps
+2. Other apps
+
+> Use the most sensible order of apps, so they relate to eachother
+
 ### Safari
 
 ### Reminders
