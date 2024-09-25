@@ -52,6 +52,28 @@
 3. [Set shouldDeleteSourceFiles to True](https://discussions.apple.com/thread/7618522?sortBy=rank)
 4. Set Screenshot tool's save location to the newly created `~/Pictures/Screenshots` folder
 
+## App Store
+
+### Install apps which are generally unavailable through homebrew
+
+Apple apps
+
+- Numbers
+- Pages
+- Keynote
+- iMovie
+- GarageBand
+
+Development
+
+- Xcode
+
+Other
+
+- Kindle
+
+> In the future, consider using `mas` to automatically install these apps from Brew Bundle. The support seems to be broken as of now.
+
 ## Development
 
 ### Sharing
@@ -163,7 +185,8 @@ git config --global user.signingkey ~/.ssh/kk-ssh.pub
 git config --global commit.gpgsign true
 ```
 
-### [Install Node Version Manager (NVM)](https://formulae.brew.sh/formula/nvm)
+### [Install nvm](https://formulae.brew.sh/formula/nvm)
+
 ```
 brew install nvm
 mkdir ~/.nvm
@@ -171,3 +194,13 @@ echo 'export NVM_DIR="$HOME/.nvm"
     [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" # This loads nvm
     [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" # This loads nvm bash_completion' >> ~/.bash_profile
 ```
+
+### [Install pyenv](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation)
+
+1. Consider installing with Homebrew:
+
+```
+brew install pyenv
+```
+
+2. Then follow the rest of the post-installation steps, starting with [Set up your shell environment for Pyenv](https://github.com/pyenv/pyenv?tab=readme-ov-file#set-up-your-shell-environment-for-pyenv).
